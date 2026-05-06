@@ -9,6 +9,25 @@ services:
       - "5432:5432"
     volumes:
       - gatekeeper_db_data:/var/lib/postgresql/data
+    networks:
+      - gatekeeper_net
+
+  bot:
+    build: .
+    container_name: gatekeeper_bot
+    restart: always
+    env_file:
+      - .env
+    depends_on:
+      - db
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - gatekeeper_net
 
 volumes:
   gatekeeper_db_data:
+
+networks:
+  gatekeeper_net:
+    driver: bridge
