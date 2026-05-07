@@ -13,7 +13,6 @@ A high-performance Telegram bot built to automate subscriber management for priv
 - **Admin Dashboard:** Exclusive access for administrators to view real-time statistics (total users, new users today).
 - **Smart Broadcasting:** Built-in `/mail` command to send mass messages to all subscribers, featuring automatic FloodWait protection to prevent bot bans.
 
-*[Вставити скріншот: Панель адміністратора після натискання команди /start або /stats]*
 
 ## 🛠 Tech Stack
 
